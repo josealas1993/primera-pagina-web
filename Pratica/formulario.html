@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Datos</title>
+</head>
+<body>
+    <!-- <header>: Etiqueta para el encabezado de la pagina -->
+    <header>
+        <h1>Registro de Estudiantes</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Pagina principal</a></li>
+                <li><a href="ubicacion.html">Ubicacion</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- contenido principal -->
+    <div>
+        <!--
+            Formulario <form>
+            action: Sirve para indicar la accion que tendra el formulario, si lo vamos a redireccionar a otra pagina
+            method: Asignamos el tipo de peticion que vamos a querer
+                    - Si hacemos envios de datos, la peticion es POST
+                    - Si obtenemos datos, la peticion es GET
+                    - Si mandamos datos para actualizarlos, la peticion es PUT
+                    - si vamos a eliminar datos, la peticion es DELETE
+            Tipos de input en HTML
+            <input type="">
+            type:
+                -text: Editor de texto que toma cualquier tipo de caracter: aletras, numeros, caracteres especiales
+                -password: Editor de texto, que valida que no se vea la contraseña
+                -radio: Muestra opciones, donde solo se puede seleccionar una
+                -checkbox: Multiples opciones 
+                -button: Genera un boton pero no hace ninguna accion
+                -submit: Genera un boton y genera una accion en base al action del formulario
+                -correo: Valida la entrada de un correo
+                -file: Genera un input para subir un archivo: imagen, documento
+                -time: Genera un input para seleccionar la hora
+                -date: Genera un calendario
+                -hidden: Es un input que el valor que tiene no se visualiza en el navegador
+                -number: Editor de texto, que solo permite numeros
+        -->
+        <form action="" method=""> <!-- peticion: POST, GET, PUT, DELETE -->
+            <!--
+                Tablas
+                cellpadding: Es el espacio entre el contenido de la celda y su border
+                cellspacing: Es el espacio entre cada celda
+                colspan: Es la combinacion entre celdas o columnas
+                rowspan: Es la combinacion entre filas 
+                <tr>: Etiqueta que indica una fila
+                <td>: Etiqueta que indica una columna o celda
+                <th>: Etiqueta que indica una celda que es encabezado
+                <thead>: Etiqueta para el encabezado de la tabla
+                <tbody>: Etiqueta para el cuerpo de la tabla
+                
+            -->
+            <table border="1px" cellpadding="5px" cellspacing="0">
+                <caption>Formulario Estudiantil</caption>
+                <!-- cuerpo de la tabla -->
+                <tbody>
+                    <tr>
+                        <th colspan="4">Informacion del estudiante</th>
+                    </tr>
+                    <tr>
+                        <td>Nombre:</td>
+                        <td colspan="3">
+                            <input type="text" name="nombre" id="nombre" placeholder="ingrese su nombre completo">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Curso:</td>
+                        <td colspan="3">
+                            <select name="curso" id="curso">
+                                <option value="HTML Basico">HTML Basico</option>
+                                <option value="CSS Basico">CSS Basico</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Direccion:</td>
+                        <td colspan="3">
+                            <textarea name="direccion" id="direccion" cols="20" rows="5"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Telefono personal</td>
+                        <td>
+                            <input type="number" name="telefono_personal" id="telefono_personal">
+                        </td>
+                        <td>Telefono de casa</td>
+                        <td>
+                            <input type="number" name="telefono_casa" id="telefono_casa">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Genero</td>
+                        <td colspan="3">
+                            <input type="radio" name="genero" id="genero" value="Masculino">Masculino
+                            <input type="radio" name="genero" id="genero" value="Femenino">Femenino
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Correo Electronico</td>
+                        <td colspan="3">
+                            <input type="email" name="correo" id="correo">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Fecha Ingreso</td>
+                        <td>
+                            <input type="date" name="fecha" id="fecha">
+                        </td>
+                        <td>Hora Ingreso</td>
+                        <td>
+                            <input type="time" name="hora" id="hora">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Foto del estudiante</td>
+                        <td colspan="3">
+                            <input type="file" name="foto" id="foto">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4">
+                            <input type="checkbox" name="condicion" id="condicion">Acepto los terminos y condiciones
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4">
+                            <input type="submit" value="Registrar Estudiantes" name="registrar" id="registrar">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+    </div>
+</body>
+</html>
